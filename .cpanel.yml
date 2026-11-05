@@ -1,7 +1,9 @@
 ---
 deployment:
   tasks:
+    - export REPOPATH=/home/peipostcards/git/
     - export DEPLOYPATH=/home/peipostcards/public_html/
-    - /bin/rsync -rlptD --no-perms --exclude='.git' --exclude='.cpanel.yml' --exclude='README.md' ./ $DEPLOYPATH
-    - /bin/chmod 750 $DEPLOYPATH
-    - /bin/chmod 644 $DEPLOYPATH/.htaccess || true
+    - /usr/bin/find $REPOPATH -path "$REPOPATH.git" -prune -o -type d -exec /bin/chmod 0755 {} +
+    - /usr/bin/find $REPOPATH -path "$REPOPATH.git" -prune -o -type f -exec /bin/chmod 0644 {} +
+    - /bin/rsync -rltDv --delete --link-dest=$REPOPATH --exclude='.git' --exclude='.cpanel.yml' --exclude='README.md' --exclude='.well-known' --exclude='cgi-bin' $REPOPATH $DEPLOYPATH
+    - /bin/chmod 0755 $DEPLOYPATH
