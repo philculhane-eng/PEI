@@ -1,6 +1,7 @@
 const BASE=new URL('../',document.currentScript.src);const U=p=>new URL(p,BASE).href;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 let catalogue,stories,filtered=[],page=1,searchTimer;const params=new URLSearchParams(location.search);
+if(!params.has('q') && params.has('s')) params.set('q',params.get('s'));
 const cardURL=c=>U('cards/'+c.key+'/');const topicURL=t=>U('?topic='+encodeURIComponent(t));
 const isLocal=['localhost','127.0.0.1'].includes(location.hostname);
 function shell(){document.querySelector('#header').innerHTML=`<a class="skip" href="#main">Skip to content</a><header class="site-header"><a class="brand" href="${U('')}"><img src="${U('assets/logo.png')}" alt=""><span><strong>P.E.I. Postcards</strong><small>Prince Edward Island, Canada</small></span></a><nav aria-label="Main navigation"><a href="${U('')}" ${document.body.dataset.view==='collection'?'aria-current="page"':''}>Collection</a><a href="${U('stories/')}" ${document.body.dataset.view==='stories'||document.body.dataset.view==='story'?'aria-current="page"':''}>Stories</a><a href="${U('contact/')}" ${document.body.dataset.view==='contact'?'aria-current="page"':''}>Contact</a></nav></header>`;document.querySelector('#footer').innerHTML=`<footer><span>© ${new Date().getFullYear()} P.E.I. Postcards</span><span>${isLocal?`<a href="${U('editor/')}">Edit stories</a> · `:''}<a class="back-top" href="#top">Back to top ↑</a></span></footer>`;}
