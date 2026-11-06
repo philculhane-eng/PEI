@@ -1,0 +1,14 @@
+/* Paired scans can be enlarged separately, including on a narrow screen. */
+.prose > div {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem;margin:1.6rem 0 2rem}
+.prose > div figure {min-width:0;margin:0}
+.prose > div figure > a {display:block;background:#eae6d9;padding:.35rem}
+.prose > div img {width:100%;height:auto;aspect-ratio:1.57;object-fit:contain;margin:0}
+.prose figcaption {font:normal .9rem/1.5 Arial,sans-serif;color:var(--ink);margin-top:.55rem}
+.prose details {margin:2.2rem 0 1.4rem;padding:1rem;border-block:1px solid var(--line)}
+.prose summary {cursor:pointer;font:bold 1rem/1.5 Arial,sans-serif}
+.prose details h3 {font-size:1.35rem;margin:1.25rem 0 .4rem}
+.prose details p,.prose details li {font:normal .94rem/1.6 Arial,sans-serif}
+.prose details p {margin:1rem 0}.prose details ul {padding-left:1.25rem;margin:.25rem 0}
+.prose details li {margin-bottom:.4rem}
+#story-cards {display:none}
+@media(max-width:600px){.prose > div {grid-template-columns:1fr;gap:1.15rem}}
