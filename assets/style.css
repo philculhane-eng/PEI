@@ -78,38 +78,39 @@
 }
 
 /* Linked story galleries keep portrait and landscape cards uncropped. */
-:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul {
+:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul {
   display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px 18px;
   list-style:none;padding:0;margin:1.25rem 0 2rem
 }
-:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul > li {margin:0;min-width:0}
-:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul a {
+:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul > li {margin:0;min-width:0}
+:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul a {
   display:block;height:100%;line-height:1.25;text-decoration:none;
   border-bottom:1px solid #d6cbb8;padding:0 0 8px
 }
-:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul img {
+:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul img {
   display:block;width:100%;height:auto;aspect-ratio:1.58;object-fit:contain;
   background:#eee7d8;margin:0 auto 5px
 }
-:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul strong {
+:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul strong {
   display:block;font:600 1rem/1.15 Georgia,serif
 }
-:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul em,
-:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul span {
+:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul em,
+:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul span {
   display:block;margin-top:3px;font:normal .78rem/1.2 system-ui,sans-serif;color:#584735
 }
-:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul a:is(:hover,:focus-visible) strong {text-decoration:underline}
+:is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul a:is(:hover,:focus-visible) strong {text-decoration:underline}
 [data-story="carter-and-co-island-in-amber"] details {border-top:1px solid #cec4b0;padding-top:1rem}
 [data-story="carter-and-co-island-in-amber"] summary {cursor:pointer;font-weight:bold}
 [data-story="carter-and-co-island-in-amber"] details[open] > summary {margin-bottom:1rem}
 /* The gallery and its duplicate register already link to all copies. */
 [data-story="carter-and-co-island-in-amber"] #story-cards {display:none}
 @media (max-width:650px) {
-  :is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 10px}
-  :is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"]) .prose > ul strong {font-size:.92rem}
+  :is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul {grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 10px}
+  :is([data-story="carter-and-co-island-in-amber"], [data-story="louson-photo"], [data-story="montague-furnishing-company"], [data-story="the-ejl-postcards-of-southeastern-pei"]) .prose > ul strong {font-size:.92rem}
 }
 
 
+[data-story="the-ejl-postcards-of-southeastern-pei"] #story-cards,
 [data-story="louson-photo"] #story-cards,
 [data-story="montague-furnishing-company"] #story-cards {display:none}
 [data-story="montague-furnishing-company"] .prose > ul {
