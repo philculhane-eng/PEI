@@ -1,0 +1,33 @@
+.prose > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.1rem;
+  margin: 1.25rem 0 1.75rem;
+}
+.prose > div:has(> figure:nth-child(3)) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.prose > div figure { min-width: 0; margin: 0; }
+.prose figure > a { display: block; background: #e9e8df; padding: .35rem; }
+.prose figure img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  aspect-ratio: 1.56;
+  object-fit: contain;
+}
+.prose > figure { max-width: 35rem; margin-inline: auto; }
+.prose figcaption {
+  margin-top: .55rem;
+  font: normal .95rem/1.45 Arial, sans-serif;
+  color: var(--ink);
+}
+.prose figcaption strong { display: block; }
+#story-cards { display: none; }
+
+@media (max-width: 650px) {
+  .prose > div, .prose > div:has(> figure:nth-child(3)) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
