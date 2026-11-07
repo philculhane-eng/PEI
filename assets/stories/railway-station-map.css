@@ -39,10 +39,15 @@
 @media(max-width:410px) {
   .prose div[id^="rail-album-"],.prose div[id^="rail-album-"]:has(figure:nth-child(2):last-child) {grid-template-columns:minmax(0,1fr)}
 }
+/* Adjacent stops outside Summerside share a short stretch of track. Keep
+   the dots individually selectable; their labels provide larger click areas. */
+#rail-map [id^="rail-plate-"] :is(a[href="#rail-summerside"],a[href="#rail-travellers-rest"]) {width:13px;height:13px}
+#rail-map a[href="#rail-travellers-rest"]::after {content:"";pointer-events:none;position:absolute;bottom:calc(50% + 6px);right:50%;width:1px;height:12px;background:#794332;transform:rotate(-20deg);transform-origin:bottom}
 /* Station positions from the map projection. */
 #rail-plate-island a[href="#rail-tignish"] {left:17.1133%;top:12.8900%;--dx:10px;--dy:-2px;--shift:0}
 #rail-plate-island a[href="#rail-alberton"] {left:15.9988%;top:24.0776%;--dx:10px;--dy:-2px;--shift:0}
 #rail-plate-island a[href="#rail-summerside"] {left:25.9217%;top:58.2079%;--dx:-10px;--dy:10px;--shift:-100%}
+#rail-plate-island a[href="#rail-travellers-rest"] {left:27.3238%;top:56.1811%;--dx:-5px;--dy:-22px;--shift:-100%}
 #rail-plate-island a[href="#rail-kensington"] {left:31.3864%;top:54.4787%;--dx:9px;--dy:-12px;--shift:0}
 #rail-plate-island a[href="#rail-hunter-river"] {left:41.6688%;top:61.5317%;--dx:4px;--dy:-18px;--shift:0}
 #rail-plate-island a[href="#rail-charlottetown"] {left:49.9738%;top:70.8547%;--dx:-9px;--dy:13px;--shift:-100%}
@@ -52,6 +57,7 @@
 #rail-plate-west a[href="#rail-tignish"] {left:28.5437%;top:14.5689%;--dx:9px;--dy:0px;--shift:0}
 #rail-plate-west a[href="#rail-alberton"] {left:26.2513%;top:30.1543%;--dx:9px;--dy:0px;--shift:0}
 #rail-plate-west a[href="#rail-summerside"] {left:46.6608%;top:77.7011%;--dx:-7px;--dy:14px;--shift:-100%}
+#rail-plate-west a[href="#rail-travellers-rest"] {left:49.5447%;top:74.8776%;--dx:-5px;--dy:-22px;--shift:-100%}
 #rail-plate-west a[href="#rail-kensington"] {left:57.9008%;top:72.5059%;--dx:6px;--dy:-16px;--shift:0}
 #rail-plate-east a[href="#rail-hunter-river"] {left:11.0533%;top:27.9540%;--dx:7px;--dy:-14px;--shift:0}
 #rail-plate-east a[href="#rail-charlottetown"] {left:25.3175%;top:44.1084%;--dx:0px;--dy:12px;--shift:-75%}
