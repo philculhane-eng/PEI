@@ -1,0 +1,26 @@
+.prose > div {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin: 1.5rem 0 2rem;
+}
+.prose > div:has(> figure:nth-child(3)) {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.prose > div figure { min-width: 0; margin: 0; }
+.prose figure > a { display: block; background: #e9e8df; padding: .4rem; }
+.prose figure img {
+  width: 100%; height: auto; margin: 0;
+  aspect-ratio: 1.5; object-fit: contain;
+}
+.prose > figure { max-width: 43rem; margin: 1.6rem auto 2rem; }
+.prose figcaption { margin-top: .55rem; font: normal .95rem/1.45 Arial, sans-serif; color: var(--ink); }
+.prose figcaption strong { display: inline; }
+#story-cards { display: none; }
+@media (max-width: 680px) {
+  .prose > div, .prose > div:has(> figure:nth-child(3)) { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+  .prose figcaption { font-size: .85rem; }
+}
+@media (max-width: 380px) {
+  .prose > div, .prose > div:has(> figure:nth-child(3)) { grid-template-columns: 1fr; }
+}
