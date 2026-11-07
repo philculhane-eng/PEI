@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <title>P.E.I. Postcards lighthouse</title>
+  <rect width="64" height="64" rx="12" fill="#faf8ef"/>
+  <path fill="#0e75af" d="M0 49c9-7 17-7 27-2s20 6 37-2v9c-14 8-26 7-38 2S9 51 0 57z"/>
+  <path fill="#d1d4d4" stroke="#334a4b" stroke-width="2.5" stroke-linejoin="round" d="M25 23h14l5 26H20z"/>
+  <path fill="#fff" d="M27 25h4l-2 22h-5z"/>
+  <path fill="#a9d8e2" stroke="#334a4b" stroke-width="2.5" d="M25 14h14v9H25z"/>
+  <path fill="#b9483e" d="M19 15 30 7V5h4v2l11 8v2H19z"/>
+  <path fill="#344748" d="M21 22h22v4H21zM30 30h4v6h-4zM29 41h6v8h-6zM17 48h30v4H17z"/>
+</svg>
