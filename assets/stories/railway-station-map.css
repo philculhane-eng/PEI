@@ -43,6 +43,22 @@
    the dots individually selectable; their labels provide larger click areas. */
 #rail-map [id^="rail-plate-"] :is(a[href="#rail-summerside"],a[href="#rail-travellers-rest"]) {width:13px;height:13px}
 #rail-map a[href="#rail-travellers-rest"]::after {content:"";pointer-events:none;position:absolute;bottom:calc(50% + 6px);right:50%;width:1px;height:12px;background:#794332;transform:rotate(-20deg);transform-origin:bottom}
+/* Enlarge part of the existing full card. Numbered leaders are drawn on
+   the frame, so opening the card always shows the untouched catalogue scan. */
+.prose figure[id^="rail-detail-"] {max-width:40rem;margin:1.15rem 0 1.4rem}
+.prose figure[id^="rail-detail-"] > a {position:relative;display:block;overflow:hidden;container-type:inline-size;background:#eeeadd}
+.prose figure[id^="rail-detail-"] img {position:absolute;display:block;max-width:none;max-height:none;height:auto;margin:0}
+.prose figure[id^="rail-detail-"] b {position:absolute;transform:translate(-50%,0);display:grid;place-items:center;width:1.35rem;height:1.35rem;border-radius:50%;background:#88371f;color:white;border:1px solid white;font:700 .85rem/1 Arial,sans-serif}
+.prose figure[id^="rail-detail-"] b::before {content:"";position:absolute;bottom:100%;height:1.5cqw;width:2px;background:white;box-shadow:1px 0 #69331f}
+.prose figure[id^="rail-detail-"] figcaption {margin-top:.55rem}
+#rail-detail-summerside > a {aspect-ratio:3.3}
+#rail-detail-summerside img {width:190%;left:-73%;top:-208%}
+#rail-detail-summerside b:first-of-type {left:12.5%;top:31.5%}
+#rail-detail-summerside b:last-of-type {left:51%;top:39%}
+#rail-detail-charlottetown {width:min(100%,29rem)}
+#rail-detail-charlottetown > a {aspect-ratio:2.05}
+#rail-detail-charlottetown img {width:375%;left:-224%;top:-164%}
+#rail-detail-charlottetown b {left:36%;top:58%}
 /* Station positions from the map projection. */
 #rail-plate-island a[href="#rail-tignish"] {left:17.1133%;top:12.8900%;--dx:10px;--dy:-2px;--shift:0}
 #rail-plate-island a[href="#rail-alberton"] {left:15.9988%;top:24.0776%;--dx:10px;--dy:-2px;--shift:0}
@@ -53,6 +69,7 @@
 #rail-plate-island a[href="#rail-charlottetown"] {left:49.9738%;top:70.8547%;--dx:-9px;--dy:13px;--shift:-100%}
 #rail-plate-island a[href="#rail-georgetown"] {left:71.1498%;top:75.1514%;--dx:12px;--dy:-3px;--shift:0}
 #rail-plate-island a[href="#rail-montague"] {left:66.9074%;top:76.4485%;--dx:-12px;--dy:15px;--shift:-100%}
+#rail-plate-island a[href="#rail-murray-river"] {left:68.0938%;top:88.6089%;--dx:-7px;--dy:-5px;--shift:-100%}
 #rail-plate-island a[href="#rail-murray-harbour"] {left:71.2217%;top:89.5818%;--dx:10px;--dy:3px;--shift:0}
 #rail-plate-west a[href="#rail-tignish"] {left:28.5437%;top:14.5689%;--dx:9px;--dy:0px;--shift:0}
 #rail-plate-west a[href="#rail-alberton"] {left:26.2513%;top:30.1543%;--dx:9px;--dy:0px;--shift:0}
@@ -63,4 +80,5 @@
 #rail-plate-east a[href="#rail-charlottetown"] {left:25.3175%;top:44.1084%;--dx:0px;--dy:12px;--shift:-75%}
 #rail-plate-east a[href="#rail-georgetown"] {left:61.6883%;top:51.5534%;--dx:7px;--dy:-8px;--shift:0}
 #rail-plate-east a[href="#rail-montague"] {left:54.4018%;top:53.8010%;--dx:-6px;--dy:15px;--shift:-100%}
+#rail-plate-east a[href="#rail-murray-river"] {left:56.4395%;top:74.8719%;--dx:-7px;--dy:-7px;--shift:-100%}
 #rail-plate-east a[href="#rail-murray-harbour"] {left:61.8117%;top:76.5576%;--dx:6px;--dy:8px;--shift:0}
