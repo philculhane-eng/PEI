@@ -1,0 +1,60 @@
+#rail-map {margin-top:1.4rem;scroll-margin-top:1rem}
+#rail-map p {margin:.45rem 0 .75rem;font:1rem/1.5 Arial,sans-serif;color:#3f5048}
+#rail-map h3 {margin:1.25rem 0 .45rem;font:600 1.04rem/1.4 Georgia,serif}
+#rail-map [id^="rail-plate-"] {position:relative;isolation:isolate;background-position:center;background-size:100% 100%;border-radius:3px;box-shadow:inset 0 0 0 1px #b8c5b9}
+#rail-plate-island {aspect-ratio:840/536;background-image:url(rail-stations-island.svg)}
+#rail-plate-west {aspect-ratio:380/358;background-image:url(rail-stations-west.svg)}
+#rail-plate-east {aspect-ratio:400/253;background-image:url(rail-stations-east.svg)}
+#rail-map h3,#rail-plate-west,#rail-plate-east {display:none}
+#rail-map [id^="rail-plate-"] a {position:absolute;width:22px;height:22px;transform:translate(-50%,-50%);color:#273f36;font:600 clamp(12px,1.2vw,16px)/1.15 Arial,sans-serif;text-decoration:none;z-index:1}
+#rail-map [id^="rail-plate-"] a::before {content:"";position:absolute;left:50%;top:50%;width:10px;height:10px;transform:translate(-50%,-50%);border-radius:50%;background:#a33c23;border:1.6px solid #fff9e9;box-shadow:0 0 0 1px #794332}
+#rail-map [id^="rail-plate-"] b {position:absolute;white-space:nowrap;padding:3px 4px;border-radius:2px;background:#fcf7eae8;transform:translate(var(--shift,0),-50%);left:calc(50% + var(--dx));top:calc(50% + var(--dy));font:inherit}
+#rail-map [id^="rail-plate-"] a:is(:hover,:focus-visible) {z-index:3}
+#rail-map [id^="rail-plate-"] a:is(:hover,:focus-visible) b {background:#2f5044;color:white;outline:2px solid #fff}
+#rail-map [id^="rail-plate-"] a:focus-visible {outline:2px solid #2f5044}
+#rail-key {margin-top:.5rem!important}
+#rail-towns {display:flex;flex-wrap:wrap;gap:.25rem .9rem;list-style:none;margin:.75rem 0 1.7rem;padding:0}
+#rail-towns li {margin:0;line-height:1.5}
+#rail-towns a {font:1rem/1.5 Arial,sans-serif}
+.prose h2[id^="rail-"] {scroll-margin-top:1rem;margin-bottom:.3rem}
+.prose div[id^="rail-album-"] {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin:1.3rem 0}
+.prose div[id^="rail-album-"]:has(figure:nth-child(2):last-child) {grid-template-columns:repeat(2,minmax(0,1fr))}
+.prose div[id^="rail-album-"]:has(figure:only-child) {grid-template-columns:minmax(0,27rem)}
+.prose div[id^="rail-album-"] figure {margin:0;min-width:0}
+.prose div[id^="rail-album-"] img {display:block;width:100%;aspect-ratio:1.58;height:auto;object-fit:contain;background:#eeeadd;margin:0 0 .45rem}
+.prose figcaption {font: .94rem/1.45 Arial,sans-serif}
+.prose details {margin:.9rem 0;font: .99rem/1.55 Arial,sans-serif}
+.prose details summary {cursor:pointer;color:#344c42}
+.prose details p {margin:.4rem 0}
+.prose p:has(> a:only-child[href="#rail-map"]) {line-height:1.4;font: .93rem Arial,sans-serif}
+#rail-paper-map {margin:1.1rem 0}
+#rail-paper-map img {display:block;width:100%;margin:0 0 .5rem;max-height:none}
+#story-cards {display:none}
+@media(max-width:680px) {
+  #rail-plate-island {display:none}
+  #rail-map h3,#rail-plate-west,#rail-plate-east {display:block}
+  #rail-map [id^="rail-plate-"] a {font-size:clamp(12px,3.3vw,16px)}
+  .prose div[id^="rail-album-"] {grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem .65rem}
+}
+@media(max-width:410px) {
+  .prose div[id^="rail-album-"],.prose div[id^="rail-album-"]:has(figure:nth-child(2):last-child) {grid-template-columns:minmax(0,1fr)}
+}
+/* Station positions from the map projection. */
+#rail-plate-island a[href="#rail-tignish"] {left:17.1133%;top:12.8900%;--dx:10px;--dy:-2px;--shift:0}
+#rail-plate-island a[href="#rail-alberton"] {left:15.9988%;top:24.0776%;--dx:10px;--dy:-2px;--shift:0}
+#rail-plate-island a[href="#rail-summerside"] {left:25.9217%;top:58.2079%;--dx:-10px;--dy:10px;--shift:-100%}
+#rail-plate-island a[href="#rail-kensington"] {left:31.3864%;top:54.4787%;--dx:9px;--dy:-12px;--shift:0}
+#rail-plate-island a[href="#rail-hunter-river"] {left:41.6688%;top:61.5317%;--dx:4px;--dy:-18px;--shift:0}
+#rail-plate-island a[href="#rail-charlottetown"] {left:49.9738%;top:70.8547%;--dx:-9px;--dy:13px;--shift:-100%}
+#rail-plate-island a[href="#rail-georgetown"] {left:71.1498%;top:75.1514%;--dx:12px;--dy:-3px;--shift:0}
+#rail-plate-island a[href="#rail-montague"] {left:66.9074%;top:76.4485%;--dx:-12px;--dy:15px;--shift:-100%}
+#rail-plate-island a[href="#rail-murray-harbour"] {left:71.2217%;top:89.5818%;--dx:10px;--dy:3px;--shift:0}
+#rail-plate-west a[href="#rail-tignish"] {left:28.5437%;top:14.5689%;--dx:9px;--dy:0px;--shift:0}
+#rail-plate-west a[href="#rail-alberton"] {left:26.2513%;top:30.1543%;--dx:9px;--dy:0px;--shift:0}
+#rail-plate-west a[href="#rail-summerside"] {left:46.6608%;top:77.7011%;--dx:-7px;--dy:14px;--shift:-100%}
+#rail-plate-west a[href="#rail-kensington"] {left:57.9008%;top:72.5059%;--dx:6px;--dy:-16px;--shift:0}
+#rail-plate-east a[href="#rail-hunter-river"] {left:11.0533%;top:27.9540%;--dx:7px;--dy:-14px;--shift:0}
+#rail-plate-east a[href="#rail-charlottetown"] {left:25.3175%;top:44.1084%;--dx:0px;--dy:12px;--shift:-75%}
+#rail-plate-east a[href="#rail-georgetown"] {left:61.6883%;top:51.5534%;--dx:7px;--dy:-8px;--shift:0}
+#rail-plate-east a[href="#rail-montague"] {left:54.4018%;top:53.8010%;--dx:-6px;--dy:15px;--shift:-100%}
+#rail-plate-east a[href="#rail-murray-harbour"] {left:61.8117%;top:76.5576%;--dx:6px;--dy:8px;--shift:0}
