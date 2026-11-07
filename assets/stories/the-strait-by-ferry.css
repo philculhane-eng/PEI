@@ -42,3 +42,112 @@
   .prose > div:has(> figure), .prose > div:has(> figure):not(:has(> figure:nth-child(3))) { grid-template-columns: 1fr; }
   .prose details figcaption { font-size:.85rem; }
 }
+
+/* Ferry route maps. */
+#ferry-round-trip { margin-bottom: .65rem; }
+#ferry-round-trip + #ferry-map-intro { font-size: inherit; color: inherit; }
+#ferry-trip-figure { margin: 1.2rem 0; }
+#ferry-trip-plot, #ferry-atlas-charts > div {
+  position: relative;
+  isolation: isolate;
+  outline: 1px solid #b8c6b9;
+  outline-offset: -1px;
+  background-color: #e0ecea;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+#ferry-trip-plot { aspect-ratio: 800 / 444; background-image: url(ferry-trip.svg); }
+#ferry-trip-figure figcaption { margin-top: .7rem; font-size: .94rem; line-height: 1.55; }
+#ferry-trip-plot { container-type:inline-size; overflow:hidden; }
+#ferry-trip-plot a {
+  position:absolute; left:var(--x); top:var(--y); transform:translateY(-50%);
+  color:var(--route); text-decoration:none; white-space:nowrap;
+}
+#ferry-trip-plot #ferry-trip-wood { left:auto; right:calc(100% - var(--x)); }
+#ferry-trip-plot a::before {
+  content:""; position:absolute; left:var(--map-origin-x); top:calc(50% + var(--map-origin-y));
+  width:100cqw; height:55.5cqw;
+}
+#ferry-trip-plot #ferry-trip-wood::before { left:calc(100% + var(--map-origin-x)); }
+#ferry-trip-plot b {
+  position:relative; display:block;
+  font:italic bold clamp(.8rem,1.7vw,1.05rem)/1.15 Georgia,serif;
+  padding:.42em .65em; white-space:nowrap;
+  border:1.5px solid var(--route); border-radius:.15rem;
+  background:#fffdf4; box-shadow:0 1px 3px #22443b22;
+  text-decoration:underline; text-underline-offset:.17em;
+}
+#ferry-trip-plot a:is(:focus-visible,:hover) b { color: white; background: var(--route); }
+#ferry-trip-plot a:focus-visible { outline: none; }
+#ferry-trip-plot a:focus-visible b, #ferry-atlas-charts a:focus-visible b {
+  outline: 3px solid #1c3330; outline-offset: 3px;
+}
+#ferry-trip-plot a span, #ferry-atlas-charts a span {
+  position: absolute; overflow: hidden; width: 1px; height: 1px; clip-path: inset(50%); white-space: nowrap;
+}
+#ferry-atlas { border: 1px solid var(--line); background: #f9f8f2; padding: .85rem 1rem; margin: 1rem 0 1.8rem; }
+#ferry-atlas > summary { padding-block: .2rem; }
+#ferry-atlas > p { margin: .7rem 0 1rem; }
+#ferry-atlas-charts > h3, #ferry-west-plot, #ferry-east-plot { display:none; }
+#ferry-routes-plot { aspect-ratio: 840 / 477; background-image: url(ferry-routes.svg); }
+#ferry-atlas-charts a {
+  position: absolute; left: var(--x); top: var(--y); transform: translate(-50%,-50%);
+  width: 2.25rem; height: 2.25rem; display: grid; place-items: center; text-decoration: none;
+}
+#ferry-atlas-charts b {
+  display: grid; place-items: center; width: 1.4rem; height: 1.4rem;
+  font: bold .88rem/1 Arial,sans-serif; border-radius: 50%; color: #fff;
+  background:var(--route); box-shadow:0 0 0 1.5px #fff9e9;
+}
+#ferry-atlas-charts a:hover b { outline: 2px solid var(--route); outline-offset: 2px; }
+#ferry-route-key { counter-reset: crossing; margin: .6rem 0; padding: 0; list-style: none; }
+#ferry-route-key > li {
+  position:relative; border-bottom:1px solid var(--line); padding:.8rem .4rem .8rem 2.25rem;
+  font-size:.96rem; line-height:1.45; scroll-margin-top:1rem;
+}
+#ferry-route-key > li::before {
+  counter-increment:crossing; content:counter(crossing); position:absolute; left:0; top:.86rem;
+  width:1.5rem; height:1.5rem; border-radius:50%; background:#dce8df; color:#284c46;
+  display:grid; place-items:center; font-size:.87rem; font-weight:bold;
+}
+#ferry-route-key > li:target { background:#eef0e7; outline:2px solid #698577; }
+#ferry-route-key h4 { font: bold 1.14rem/1.3 Georgia,serif; margin:0; }
+#ferry-route-key p { margin:.25rem 0; line-height:1.55; }
+#ferry-route-key li a { display:inline-block; padding:.15rem 0; font-size:.94rem; }
+#ferry-atlas > #ferry-map-credit { font-size:.81rem; line-height:1.5; color:#50625b; margin:.85rem 0 0; }
+@media (max-width:560px) {
+  #ferry-trip-plot a::before { height:85.75cqw; }
+  #ferry-trip-plot { aspect-ratio:400 / 343; background-image:url(ferry-trip-mobile.svg); }
+  #ferry-routes-plot { display:none; }
+  #ferry-atlas-charts > h3 { display:block; font: bold 1.1rem Georgia,serif; margin: 1rem 0 .5rem; }
+  #ferry-west-plot { display:block; aspect-ratio:360 / 205; background-image:url(ferry-west.svg); }
+  #ferry-east-plot { display:block; aspect-ratio:360 / 350; background-image:url(ferry-east.svg); }
+  #ferry-atlas { padding:.65rem .6rem; }
+  #ferry-atlas-charts a { width:1.95rem; height:1.95rem; }
+  #ferry-atlas-charts b { width:1.15rem; height:1.15rem; font-size:.75rem; }
+}
+
+#ferry-trip-borden { --map-origin-x: -20.046cqw; --map-origin-y: -20.105cqw; --x: 20.05%; --y: 36.23%; --route: #155b56; }
+#ferry-trip-borden::before { clip-path: polygon(20.94% 42.58%, 20.62% 41.59%, 21.97% 36.76%, 24.23% 30.52%, 21.09% 26.83%, 18.72% 33.39%, 17.00% 39.82%, 17.27% 43.96%); }
+#ferry-trip-wood { --map-origin-x: -71.594cqw; --map-origin-y: -45.112cqw; --x: 71.59%; --y: 81.28%; --route: #994525; }
+#ferry-trip-wood::before { clip-path: polygon(67.66% 66.17%, 67.60% 67.08%, 67.51% 72.30%, 69.79% 82.31%, 72.17% 90.71%, 72.17% 89.91%, 71.35% 91.18%, 74.01% 95.96%, 75.46% 93.14%, 75.66% 88.24%, 73.20% 79.49%, 71.13% 70.55%, 71.34% 67.58%, 71.38% 66.95%); }
+#ferry-routes-plot a[href="#ferry-run-borden"] { --x: 38.07%; --y: 43.71%; --route: #155b56; }
+#ferry-routes-plot a[href="#ferry-run-wood"] { --x: 74.36%; --y: 71.13%; --route: #994525; }
+#ferry-routes-plot a[href="#ferry-run-shediac"] { --x: 23.57%; --y: 30.77%; --route: #8b5b21; }
+#ferry-routes-plot a[href="#ferry-run-charlotte"] { --x: 61.57%; --y: 56.29%; --route: #366782; }
+#ferry-routes-plot a[href="#ferry-run-george"] { --x: 85.64%; --y: 61.35%; --route: #644c80; }
+#ferry-routes-plot a[href="#ferry-run-enterprise"] { --x: 82.07%; --y: 71.58%; --route: #996332; }
+#ferry-routes-plot a[href="#ferry-run-souris"] { --x: 92.71%; --y: 49.50%; --route: #276968; }
+@media (max-width: 560px) {
+#ferry-trip-borden { --map-origin-x: -16.599cqw; --map-origin-y: -24.941cqw; --x: 16.60%; --y: 29.09%; --route: #155b56; }
+#ferry-trip-borden::before { clip-path: polygon(18.13% 34.08%, 17.72% 33.52%, 19.35% 29.76%, 22.15% 24.78%, 17.54% 21.27%, 14.58% 26.56%, 12.41% 31.84%, 12.74% 35.39%); }
+#ferry-trip-wood { --map-origin-x: -80.544cqw; --map-origin-y: -55.962cqw; --x: 80.54%; --y: 65.26%; --route: #994525; }
+#ferry-trip-wood::before { clip-path: polygon(75.24% 53.07%, 75.17% 53.83%, 75.07% 58.18%, 77.92% 66.29%, 80.86% 73.01%, 80.88% 71.95%, 79.95% 72.86%, 83.84% 77.40%, 85.72% 75.01%, 85.98% 70.67%, 82.92% 63.62%, 80.38% 56.52%, 80.65% 54.29%, 80.70% 53.81%); }
+#ferry-west-plot a[href="#ferry-run-borden"] { --x: 74.79%; --y: 61.94%; --route: #155b56; }
+#ferry-west-plot a[href="#ferry-run-shediac"] { --x: 44.90%; --y: 35.34%; --route: #8b5b21; }
+#ferry-east-plot a[href="#ferry-run-wood"] { --x: 47.77%; --y: 67.69%; --route: #994525; }
+#ferry-east-plot a[href="#ferry-run-charlotte"] { --x: 19.83%; --y: 48.75%; --route: #366782; }
+#ferry-east-plot a[href="#ferry-run-george"] { --x: 72.44%; --y: 55.22%; --route: #644c80; }
+#ferry-east-plot a[href="#ferry-run-enterprise"] { --x: 64.63%; --y: 68.27%; --route: #996332; }
+#ferry-east-plot a[href="#ferry-run-souris"] { --x: 87.89%; --y: 40.09%; --route: #276968; }
+}
