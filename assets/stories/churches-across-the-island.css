@@ -1,0 +1,104 @@
+/* Only loaded by the lighthouse postcard story. */
+.story {max-width:920px}
+.prose>p,.prose>h2,.prose>h3 {max-width:72ch}
+#church-nav {display:flex;flex-wrap:wrap;gap:8px 22px;margin:0 0 24px;padding:12px 0;border-block:1px solid var(--line);font:600 .875rem/1.65 Arial,sans-serif}
+#church-nav a,#church-return {color:#804428}
+#church-map {margin:18px 0 0}
+#church-map p {max-width:70ch;margin-bottom:12px}
+#church-map h2 {margin:0}
+#church-map figure {margin:0;position:relative;isolation:isolate;background:#dfebe7;border-radius:8px}
+#church-map figure img {margin:0;display:block;width:100%;height:auto;max-height:none;border-radius:8px}
+#church-map figure a {position:absolute;display:grid;place-items:center;transform:translate(-50%,-50%);width:25px;height:25px;border-radius:50%;background:#204c48;color:white;border:1.5px solid #fff8da;box-shadow:0 1px 3px #183e3e55;text-decoration:none;font:700 11px/1 Arial,sans-serif;letter-spacing:.02em;z-index:1}
+#church-map figure a[href="#church-cape-tormentine-n-b"] {background:#8b482d}
+#church-map figure a span {position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+#church-map figure a:is(:hover,:focus-visible) {background:#733c26;z-index:3;outline:3px solid #fff;outline-offset:1px}
+#church-map figure a:is(:hover,:focus-visible) span {clip-path:none;width:max-content;max-width:140px;height:auto;overflow:visible;text-align:center;top:calc(100% + 5px);padding:5px 8px;background:#203c39;color:#fff;border-radius:4px;line-height:1.4;box-shadow:0 1px 4px #0003;pointer-events:none}
+#church-map h3 {font:700 .78rem/1.5 Arial,sans-serif;text-transform:uppercase;letter-spacing:.10em;margin:18px 0 5px}
+#church-map :is(#church-west,#church-centre,#church-east),#church-map h3 {display:none}
+#church-map>p:last-child {font:normal .83rem/1.6 Arial,sans-serif;color:#465d58;margin:9px 0 0}
+#church-index {font:normal .95rem/1.5 Arial,sans-serif;margin:16px 0}
+#church-index summary {cursor:pointer;color:#26534b;font-weight:700;padding:10px 0}
+#church-index ol {list-style:none;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:2px 12px;padding:0}
+#church-index li {margin:0}
+#church-index a {display:block;padding:5px 0}
+[id^="church-gallery-"] {list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 14px}
+[id^="church-gallery-"] li {min-width:0;margin:0;padding:8px 8px 10px;border:1px solid #d8d7c9;background:#fcfaf3;border-radius:4px;scroll-margin-top:16px}
+[id^="church-gallery-"] li:target {outline:3px solid #975034;outline-offset:1px;background:#fff4de}
+[id^="church-gallery-"] a:first-child {display:block;text-decoration:none}
+[id^="church-gallery-"] img {width:100%;height:auto;aspect-ratio:1.45;object-fit:contain;background:#e9e6da;margin:0 0 9px}
+[id^="church-gallery-"] :is(strong,em,small,span) {display:block}
+[id^="church-gallery-"] strong {font:600 1.04rem/1.3 Georgia,serif}
+[id^="church-gallery-"] em {font:normal .86rem/1.45 Arial,sans-serif;color:#344e49;margin:3px 0 8px}
+[id^="church-gallery-"] span,[id^="church-gallery-"] li>a:not(:first-child) {font:normal .74rem/1.5 Arial,sans-serif;color:#625449}
+[id^="church-gallery-"] li>a:not(:first-child) {display:inline-block;margin-top:3px}
+[id^="church-gallery-"] a:is(:focus-visible,:hover) strong {text-decoration:underline}
+[id^="church-gallery-"] li>a:first-child:focus-visible {outline:2px solid #7b422c}
+[id^="church-gallery-"]+div {font:600 .87rem/1.65 Arial,sans-serif}
+body[data-story="churches-across-the-island"] #story-cards {display:none}
+@media(max-width:720px){
+ #church-map #church-overview {display:none}
+ #church-map :is(#church-west,#church-centre,#church-east),#church-map h3 {display:block}
+ #church-index ol,[id^="church-gallery-"] {grid-template-columns:repeat(2,minmax(0,1fr))}
+ #church-map figure {max-width:500px;margin-inline:auto}
+ #church-map h3 {max-width:500px;margin-inline:auto}
+ [id^="church-gallery-"] {gap:12px 8px}
+ [id^="church-gallery-"] strong {font-size:.96rem}
+}
+#church-nav {position:sticky;top:0;z-index:5;background:var(--paper);padding-inline:4px}
+#church-map,#church-story,#church-album,[id^="church-gallery-"] li {scroll-margin-top:65px}
+
+#church-albums>div {scroll-margin-top:70px;padding-top:18px;margin-top:28px;border-top:1px solid var(--line)}
+#church-albums>div:target {border-top:3px solid #975034}
+#church-albums>div>h3 {margin-top:0;font-size:1.45rem}
+#church-albums>div>p {max-width:72ch}
+#church-albums>div>p:last-child {font:600 .85rem/1.5 Arial,sans-serif}
+#church-message img {max-height:470px;object-fit:contain}
+#church-map figure a {width:28px;height:28px}
+#church-albums [id^="church-gallery-"] li:only-child {max-width:290px}
+
+#church-overview a[href="#church-alberton"] {left:21.448%;top:27.865%}
+#church-overview a[href="#church-belfast-eldon"] {left:59.782%;top:82.206%}
+#church-overview a[href="#church-cardigan"] {left:68.307%;top:69.861%}
+#church-overview a[href="#church-charlottetown"] {left:51.718%;top:70.308%}
+#church-overview a[href="#church-crapaud"] {left:40.860%;top:71.339%}
+#church-overview a[href="#church-grand-river"] {left:26.173%;top:49.452%}
+#church-overview a[href="#church-hope-river-st-anns"] {left:42.276%;top:55.611%}
+#church-overview a[href="#church-kensington"] {left:35.188%;top:55.058%}
+#church-overview a[href="#church-malpeque"] {left:33.146%;top:47.886%}
+#church-overview a[href="#church-miscouche"] {left:27.404%;top:55.373%}
+#church-overview a[href="#church-montague"] {left:67.119%;top:75.813%}
+#church-overview a[href="#church-montrose"] {left:21.204%;top:21.630%}
+#church-overview a[href="#church-mount-stewart"] {left:59.918%;top:60.418%}
+#church-overview a[href="#church-new-london-springbrook"] {left:39.409%;top:50.809%}
+#church-overview a[href="#church-oleary"] {left:15.409%;top:35.692%}
+#church-overview a[href="#church-rustico"] {left:46.142%;top:56.293%}
+#church-overview a[href="#church-souris"] {left:80.059%;top:60.982%}
+#church-overview a[href="#church-st-anthony-woodstock"] {left:18.308%;top:31.524%}
+#church-overview a[href="#church-st-peters-bay"] {left:69.236%;top:56.183%}
+#church-overview a[href="#church-summerside"] {left:30.656%;top:58.801%}
+#church-overview a[href="#church-tignish"] {left:22.305%;top:15.636%}
+#church-overview a[href="#church-tryon"] {left:37.111%;top:69.670%}
+#church-overview a[href="#church-vernon-river"] {left:60.702%;top:72.681%}
+#church-west a[href="#church-alberton"] {left:50.250%;top:39.076%}
+#church-west a[href="#church-grand-river"] {left:60.015%;top:69.447%}
+#church-west a[href="#church-kensington"] {left:82.999%;top:78.704%}
+#church-west a[href="#church-malpeque"] {left:77.840%;top:68.094%}
+#church-west a[href="#church-miscouche"] {left:62.555%;top:79.747%}
+#church-west a[href="#church-montrose"] {left:46.419%;top:29.132%}
+#church-west a[href="#church-oleary"] {left:32.200%;top:51.014%}
+#church-west a[href="#church-st-anthony-woodstock"] {left:40.022%;top:43.400%}
+#church-west a[href="#church-summerside"] {left:72.540%;top:84.628%}
+#church-west a[href="#church-tignish"] {left:50.907%;top:19.421%}
+#church-centre a[href="#church-charlottetown"] {left:70.724%;top:70.881%}
+#church-centre a[href="#church-crapaud"] {left:29.089%;top:73.037%}
+#church-centre a[href="#church-hope-river-st-anns"] {left:37.381%;top:33.776%}
+#church-centre a[href="#church-new-london-springbrook"] {left:25.231%;top:21.402%}
+#church-centre a[href="#church-rustico"] {left:48.564%;top:35.130%}
+#church-centre a[href="#church-tryon"] {left:18.245%;top:69.722%}
+#church-east a[href="#church-belfast-eldon"] {left:15.503%;top:74.587%}
+#church-east a[href="#church-cardigan"] {left:38.157%;top:51.295%}
+#church-east a[href="#church-montague"] {left:34.721%;top:63.324%}
+#church-east a[href="#church-mount-stewart"] {left:15.862%;top:34.407%}
+#church-east a[href="#church-souris"] {left:69.028%;top:35.447%}
+#church-east a[href="#church-st-peters-bay"] {left:40.460%;top:26.596%}
+#church-east a[href="#church-vernon-river"] {left:17.932%;top:57.022%}
