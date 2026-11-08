@@ -1,0 +1,45 @@
+/* The numbered pairs remain together; full card fronts are never cropped. */
+[data-story="postcard-dna-pugh-524"] .story{max-width:1100px}
+[data-story="postcard-dna-pugh-524"] .story>h1{max-width:950px;font-size:clamp(34px,4.3vw,52px)}
+[data-story="postcard-dna-pugh-524"] .prose>p,
+[data-story="postcard-dna-pugh-524"] .prose>h2,
+[data-story="postcard-dna-pugh-524"] .prose>details{max-width:780px;margin-left:auto;margin-right:auto}
+[data-story="postcard-dna-pugh-524"] #story-cards{display:none}
+#pugh-jump{margin:28px 0 32px;padding:20px 24px;background:var(--green);font-family:Arial,sans-serif;font-size:14px}
+#pugh-jump>p:first-child{font-weight:700;margin:0 0 10px}
+#pugh-jump>p:last-child{display:flex;flex-wrap:wrap;gap:6px;margin:0}
+#pugh-jump a{display:flex;min-width:42px;min-height:44px;align-items:center;justify-content:center;border:1px solid var(--line);background:var(--white);text-decoration:none}
+#pugh-jump a:hover,#pugh-jump a:focus-visible{background:var(--ink);color:white}
+#pugh-gallery>div{padding:32px 0 26px;border-top:1px solid var(--line);scroll-margin-top:20px}
+#pugh-gallery h3{font-size:29px;line-height:1.25;letter-spacing:-.4px;margin:0 0 10px}
+#pugh-gallery>div>p:first-of-type{font-family:Arial,sans-serif;font-size:12px;line-height:1.5;margin:0 0 16px;color:var(--muted)}
+#pugh-gallery>div>p:first-of-type strong{display:inline-block;padding:5px 9px;background:#e9e8df;letter-spacing:.2px}
+#pugh-524-5>p:first-of-type strong,#pugh-524-7>p:first-of-type strong,#pugh-524-8>p:first-of-type strong,#pugh-524-9>p:first-of-type strong,#pugh-524-10>p:first-of-type strong,#pugh-524-14>p:first-of-type strong,#pugh-524-19>p:first-of-type strong{background:#e2ebdf;color:#284631}
+#pugh-524-4>p:first-of-type strong{background:#f2e4c8;color:#684916}
+#pugh-gallery>div>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;align-items:start}
+#pugh-gallery figure{margin:0;min-width:0}
+#pugh-gallery figure>a,#pugh-gallery figure>div{display:flex;align-items:center;justify-content:center;aspect-ratio:1.53;background:#eae6db;padding:10px}
+#pugh-gallery figure>a{border:1px solid transparent;transition:border-color .15s}
+#pugh-gallery figure>a:hover,#pugh-gallery figure>a:focus-visible{border-color:var(--accent)}
+#pugh-gallery figure img{display:block;width:100%;height:100%;max-height:none;object-fit:contain;margin:0}
+#pugh-gallery figure>div{background:transparent;border:1px dashed #a2a99d}
+#pugh-gallery figure>div>span{font-family:Georgia,serif;font-size:clamp(38px,6vw,76px);font-weight:400;color:#8d9687}
+#pugh-gallery figcaption{font-family:Arial,sans-serif;font-size:13px;line-height:1.55;padding:11px 2px 0;color:var(--muted)}
+#pugh-gallery figcaption strong{display:block;color:var(--ink);font-size:14px;margin-bottom:3px}
+#pugh-gallery>div>p:last-child{font-size:17px;line-height:1.75;margin:18px 0 0;max-width:920px}
+#pugh-copies{margin-top:30px;padding:18px 20px;background:var(--green);font-size:16px}
+#pugh-copies summary{cursor:pointer;font-family:Arial,sans-serif;font-size:15px;font-weight:700}
+#pugh-copies[open] summary{margin-bottom:18px}
+#pugh-copies li{line-height:1.65;margin-bottom:12px}
+@media(max-width:600px){
+ [data-story="postcard-dna-pugh-524"] .prose{font-size:18px}
+ #pugh-jump{padding:16px}
+ #pugh-gallery>div{padding:26px 0 22px}
+ #pugh-gallery h3{font-size:24px}
+ #pugh-gallery>div>div{gap:12px}
+ #pugh-gallery figure>a,#pugh-gallery figure>div{padding:4px}
+ #pugh-gallery figcaption{font-size:12px;padding-top:9px}
+ #pugh-gallery figcaption strong{font-size:13px}
+ #pugh-gallery>div>p:last-child{font-size:16px}
+}
+@media(prefers-reduced-motion:reduce){#pugh-gallery figure>a{transition:none}}
