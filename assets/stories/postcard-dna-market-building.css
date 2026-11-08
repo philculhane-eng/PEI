@@ -1,0 +1,28 @@
+[data-story="postcard-dna-market-building"] .story{max-width:1100px}
+[data-story="postcard-dna-market-building"] .story>h1{max-width:1000px;font-size:clamp(34px,4.3vw,52px)}
+[data-story="postcard-dna-market-building"] .prose>p,
+[data-story="postcard-dna-market-building"] .prose>h2,
+[data-story="postcard-dna-market-building"] .prose>details,
+#dna-evidence{max-width:780px;margin-left:auto;margin-right:auto}
+[data-story="postcard-dna-market-building"] #story-cards{display:none}
+#dna-versions,#dna-credits,#dna-backs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px;margin:28px 0 42px;align-items:start}
+#dna-versions figure,#dna-credits figure,#dna-backs figure{margin:0;min-width:0}
+#dna-versions figure>a,#dna-backs figure>a{display:flex;align-items:center;justify-content:center;aspect-ratio:1.45;background:#eae6db;padding:10px;border:1px solid transparent}
+#dna-versions figure img,#dna-backs figure img{display:block;width:100%;height:100%;max-height:none;object-fit:contain;margin:0}
+#dna-versions figcaption,#dna-credits figcaption,#dna-backs figcaption{font-family:Arial,sans-serif;font-size:14px;line-height:1.6;color:var(--muted);padding:12px 2px 0}
+#dna-versions figcaption strong,#dna-credits figcaption strong,#dna-backs figcaption strong{display:block;color:var(--ink);font-size:15px;margin-bottom:4px}
+#dna-versions figure>a:hover,#dna-versions figure>a:focus-visible,#dna-backs figure>a:hover,#dna-backs figure>a:focus-visible{border-color:var(--accent)}
+#dna-evidence{background:#e8eee5;border-left:4px solid #52684e;padding:8px 24px;margin-top:26px;margin-bottom:36px}
+#dna-evidence p{font-size:17px;line-height:1.75}
+#dna-credits{align-items:center;background:#f0ede4;padding:18px}
+#dna-credits img{width:100%;height:auto;margin:0;display:block}
+#dna-copies{padding:18px 22px;background:var(--green);font-size:16px;margin-top:30px}
+#dna-copies summary{font-family:Arial,sans-serif;font-size:15px;font-weight:700;cursor:pointer}
+#dna-copies[open] summary{margin-bottom:18px}
+#dna-copies li{margin-bottom:12px}
+@media(max-width:600px){
+ #dna-versions,#dna-credits,#dna-backs{grid-template-columns:1fr;gap:26px;margin-top:22px}
+ #dna-versions figure>a,#dna-backs figure>a{padding:6px}
+ #dna-evidence{padding:5px 16px}
+ #dna-credits{padding:14px}
+}
