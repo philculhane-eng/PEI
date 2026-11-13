@@ -1,0 +1,33 @@
+/* Companion stylesheet, loaded only for the photographer directory. */
+.story{max-width:1080px}.prose>p{max-width:76ch}
+#dna-photo-nav{display:flex;gap:12px 24px;flex-wrap:wrap;padding:16px 0;border-block:1px solid var(--line);font:600 14px/1.5 Arial,sans-serif}
+#dna-photo-map{position:relative;isolation:isolate;margin:18px 0 0;background:#deebe9;border-radius:12px;overflow:hidden}
+#dna-photo-map>img{display:block;width:100%;height:auto;max-height:none;margin:0;border-radius:0}
+#dna-photo-map>a{position:absolute;transform:translate(-50%,-50%);width:30px;height:30px;display:grid;place-items:center;background:#204c48;color:#fff;border:2px solid #fff7d8;border-radius:50%;text-decoration:none;font:700 13px/1 Arial,sans-serif;box-shadow:0 2px 4px #183e3e44;z-index:1}
+#dna-photo-map>a span{position:absolute;clip-path:inset(50%);width:1px;height:1px;overflow:hidden}
+#dna-photo-map>a:is(:hover,:focus-visible){background:#8a4227;outline:3px solid white;z-index:2}
+#dna-photo-towns{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:18px 0 22px}
+#dna-photo-towns>div{border:1px solid var(--line);padding:14px;border-radius:6px;scroll-margin-top:25px}
+#dna-photo-towns h3{margin:0 0 8px;font-size:18px}#dna-photo-towns p{margin:0;font-size:14px;line-height:1.8}
+#dna-photo-towns>div:target{background:#f5edce;outline:2px solid #86652e}
+#dna-photo-alpha{font:14px/2 Arial,sans-serif;border-block:1px solid var(--line);padding:16px 0;margin-bottom:25px}
+#dna-photo-profiles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 36px;align-items:start}
+#dna-photo-profiles>div{border-top:2px solid #c5cabc;padding-top:16px;scroll-margin-top:25px;min-width:0}
+#dna-photo-profiles>div:target{background:#f7f0dd;outline:10px solid #f7f0dd;border-color:#86652e}
+#dna-photo-profiles h3{font-size:25px;line-height:1.2;margin:0 0 10px}
+#dna-photo-profiles h3+p{font:14px/1.6 Arial,sans-serif;color:#52625b;margin:0 0 14px}
+#dna-photo-profiles figure{margin:0 0 15px}#dna-photo-profiles figure img{display:block;width:100%;height:210px;object-fit:contain;background:#efece3;border-radius:4px;margin:0}
+#dna-photo-profiles figcaption{font:12px/1.6 Arial,sans-serif;margin-top:6px}
+#dna-photo-profiles p{font-size:16px;line-height:1.7;margin:0 0 14px}
+#dna-photo-profiles details{font:13px/1.7 Arial,sans-serif;border-top:1px solid var(--line);padding:9px 0}
+#dna-photo-profiles details p{font:13px/1.8 Arial,sans-serif;max-height:180px;overflow:auto;margin:10px 0 0}
+#dna-photo-profiles summary{cursor:pointer}
+@media(max-width:700px){#dna-photo-towns{grid-template-columns:repeat(2,minmax(0,1fr))}#dna-photo-profiles{grid-template-columns:1fr}#dna-photo-map>a{width:22px;height:22px;font-size:10px;border-width:1px}#dna-photo-profiles figure img{height:220px}#dna-photo-alpha{font-size:13px}}
+@media(max-width:420px){#dna-photo-map>a{width:20px;height:20px}#dna-photo-towns h3{font-size:17px}}
+
+#dna-photo-map a[href="#dna-town-cardigan"]{left:68.248%;top:65.335%}
+#dna-photo-map a[href="#dna-town-charlottetown"]{left:51.718%;top:70.308%}
+#dna-photo-map a[href="#dna-town-montague"]{left:67.178%;top:80.338%}
+#dna-photo-map a[href="#dna-town-oleary"]{left:16.065%;top:34.750%}
+#dna-photo-map a[href="#dna-town-souris"]{left:80.078%;top:61.400%}
+#dna-photo-map a[href="#dna-town-summerside"]{left:30.261%;top:58.380%}
