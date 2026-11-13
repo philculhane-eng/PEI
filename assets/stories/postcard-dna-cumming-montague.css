@@ -1,0 +1,27 @@
+[data-story="postcard-dna-cumming-montague"] .story{max-width:1120px}
+[data-story="postcard-dna-cumming-montague"] .story>h1{max-width:1040px;font-size:clamp(34px,4.3vw,52px)}
+[data-story="postcard-dna-cumming-montague"] .prose>p,
+[data-story="postcard-dna-cumming-montague"] .prose>h2,
+[data-story="postcard-dna-cumming-montague"] .prose>h3{max-width:780px;margin-left:auto;margin-right:auto}
+[data-story="postcard-dna-cumming-montague"] #story-cards{display:none}
+:is(#dna-cumming-family,#dna-cumming-script,#dna-cumming-loops,#dna-cumming-rounds,#dna-cumming-lettering){display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 22px;margin:28px 0 45px;align-items:start}
+:is(#dna-cumming-fox-pair,#dna-cumming-bridge-pair,#dna-cumming-shipping-pair,#dna-cumming-warwick,#dna-cumming-unplaced){display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px 24px;margin:28px 0 45px;align-items:start}
+:is(#dna-cumming-lead,#dna-cumming-studio){max-width:780px;margin:30px auto 45px}
+#dna-cumming-mark{max-width:580px;margin:25px auto 40px}
+[data-story="postcard-dna-cumming-montague"] .prose figure{margin:0;min-width:0}
+[data-story="postcard-dna-cumming-montague"] .prose figure>a{display:flex;align-items:center;justify-content:center;aspect-ratio:1.45;background:#eae6db;padding:8px;border:1px solid transparent}
+[data-story="postcard-dna-cumming-montague"] .prose figure img{display:block;width:100%;height:100%;max-height:none;object-fit:contain;margin:0}
+[data-story="postcard-dna-cumming-montague"] .prose figure>a:hover,
+[data-story="postcard-dna-cumming-montague"] .prose figure>a:focus-visible{border-color:var(--accent)}
+[data-story="postcard-dna-cumming-montague"] .prose figure>a+a{aspect-ratio:auto;height:100px;margin-top:8px;padding:5px}
+#dna-cumming-lettering figure>a{aspect-ratio:auto;height:130px}
+#dna-cumming-mark figure>a{aspect-ratio:auto;height:190px}
+#dna-cumming-fox-pair figure>a{aspect-ratio:1;max-height:430px}
+#dna-cumming-shipping-pair figure>a{aspect-ratio:1;max-height:430px}
+[data-story="postcard-dna-cumming-montague"] .prose figcaption{font-family:Arial,sans-serif;font-size:14px;line-height:1.6;color:var(--muted);padding:12px 2px 0}
+[data-story="postcard-dna-cumming-montague"] .prose figcaption strong{display:block;color:var(--ink);font-size:15px;margin-bottom:5px}
+:is(#dna-cumming-sources,#dna-cumming-others){padding:18px 22px;background:var(--green);font-size:16px;margin:30px 0}
+:is(#dna-cumming-sources,#dna-cumming-others) summary{font-family:Arial,sans-serif;font-weight:700;cursor:pointer}
+:is(#dna-cumming-sources,#dna-cumming-others)[open] summary{margin-bottom:18px}
+@media(max-width:800px){:is(#dna-cumming-family,#dna-cumming-script,#dna-cumming-loops,#dna-cumming-rounds,#dna-cumming-lettering){grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:520px){:is(#dna-cumming-family,#dna-cumming-script,#dna-cumming-loops,#dna-cumming-rounds,#dna-cumming-lettering,#dna-cumming-fox-pair,#dna-cumming-bridge-pair,#dna-cumming-shipping-pair,#dna-cumming-warwick,#dna-cumming-unplaced){grid-template-columns:1fr;gap:28px}:is(#dna-cumming-sources,#dna-cumming-others){padding:15px}#dna-cumming-mark figure>a{height:130px}}
