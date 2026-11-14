@@ -1,0 +1,14 @@
+/* Haslam–Colclough story; uses the existing optimised postcard images. */
+.story{max-width:1080px}#dna-hc-story>p,#dna-hc-story>h2{max-width:76ch;margin-left:auto;margin-right:auto}
+#dna-hc-story>figure{max-width:900px;margin:26px auto 36px}
+#dna-hc-story figure img{display:block;width:100%;height:auto;max-height:none;margin:0;object-fit:contain}
+#dna-hc-story figcaption{font:13px/1.6 Arial,sans-serif;margin-top:9px;color:#53615a}
+#dna-hc-story [id^="dna-hc-grid-"]{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:26px 0 40px;align-items:start}
+#dna-hc-story #dna-hc-grid-house,#dna-hc-story #dna-hc-grid-clara,#dna-hc-story #dna-hc-grid-milton{grid-template-columns:repeat(2,minmax(0,1fr))}
+#dna-hc-story [id^="dna-hc-grid-"] figure{margin:0;min-width:0}
+#dna-hc-story [id^="dna-hc-grid-"] figure>a{display:flex;align-items:center;justify-content:center;height:235px;background:#efebe1;border-radius:6px}
+#dna-hc-story [id^="dna-hc-grid-"] img{height:100%;object-fit:contain;border-radius:0}
+#dna-hc-story #dna-hc-grid-house figure>a,#dna-hc-story #dna-hc-grid-clara figure>a,#dna-hc-story #dna-hc-grid-milton figure>a{height:300px}
+#dna-hc-letter{max-width:850px;margin:30px auto}#dna-hc-sources{margin-top:45px;border-top:1px solid var(--line);padding:18px 0;font:14px/1.7 Arial,sans-serif}#dna-hc-sources summary{cursor:pointer;font-weight:700}#dna-hc-sources p{font-size:14px}#dna-hc-sources li{margin:8px 0}
+@media(max-width:700px){#dna-hc-story [id^="dna-hc-grid-"]{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}#dna-hc-story [id^="dna-hc-grid-"] figure>a{height:200px}#dna-hc-story #dna-hc-grid-house,#dna-hc-story #dna-hc-grid-clara,#dna-hc-story #dna-hc-grid-milton{grid-template-columns:1fr}#dna-hc-story #dna-hc-grid-house figure>a,#dna-hc-story #dna-hc-grid-clara figure>a,#dna-hc-story #dna-hc-grid-milton figure>a{height:auto;min-height:0}#dna-hc-story #dna-hc-grid-house img,#dna-hc-story #dna-hc-grid-clara img,#dna-hc-story #dna-hc-grid-milton img{height:auto}#dna-hc-story figcaption{font-size:12px}}
+@media(max-width:420px){#dna-hc-story [id^="dna-hc-grid-"] figure>a{height:160px}}
