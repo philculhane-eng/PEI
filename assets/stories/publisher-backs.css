@@ -1,0 +1,10 @@
+.story [id^="dna-back-anchor-"]{margin:0 auto 28px;padding:16px;background:#f1ede3;box-sizing:border-box}
+.story [id^="dna-back-anchor-"]>p{margin:0 0 16px;font:15px/1.5 Arial,sans-serif;color:#244e3b}
+.story [id^="dna-back-anchor-"] figure{max-width:640px;margin:14px auto 22px!important}
+.story [id^="dna-back-anchor-"] figure:last-child{margin-bottom:0!important}
+.story [id^="dna-back-anchor-"] figure img{display:block;width:100%;height:auto;max-height:none;object-fit:contain}
+.story [id^="dna-back-anchor-"] [id*="-back-"],.story [id^="dna-back-anchor-"] [id^="dna-peco-sample-"]{max-width:none;margin:0;padding:0;background:transparent}
+.story [id^="dna-back-anchor-"] figcaption{font:13px/1.6 Arial,sans-serif;color:#46584e;margin-top:9px}
+.story [id^="dna-back-anchor-"] figcaption strong,.story [id^="dna-back-anchor-"] figcaption span{display:block}
+.story #dna-sample-back-sons-british-panorama figure,.story #dna-sample-back-panorama figure{max-width:100%}
+@media(max-width:480px){.story [id^="dna-back-anchor-"]{padding:10px}}
