@@ -1,0 +1,14 @@
+#rail-harvest{max-width:900px;margin:auto}
+#rail-harvest-lead{font-size:1.2em;line-height:1.6}
+#rail-harvest figure{margin:32px 0}
+#rail-harvest figure img{display:block;max-width:100%;height:auto;margin:auto}
+#rail-harvest-explorer{background:#e7dfcd;padding:24px;border-radius:4px;margin:32px 0;color:#252c2b}
+#rail-harvest-explorer h3{margin:0 0 18px}
+#rail-harvest-explorer .detail-controls{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+#rail-harvest-explorer button{font:600 14px system-ui;color:#244a48;border:1px solid #6a8274;background:#fffcf3;padding:11px 14px;border-radius:3px;cursor:pointer;min-height:44px}
+#rail-harvest-explorer button[aria-pressed=true]{background:#244a48;color:white}
+#rail-harvest-explorer button:focus-visible{outline:3px solid #b14c2d;outline-offset:3px}
+#rail-harvest-explorer .detail-image{width:100%;height:auto;aspect-ratio:1.6;background:#d9ceb7;display:block;overflow:hidden}
+#rail-harvest-explorer .detail-caption{font:16px/1.6 system-ui;min-height:3.2em;margin-bottom:0}
+#rail-harvest-related{border-top:1px solid #cfc6b5;padding-top:24px}
+@media(max-width:600px){#rail-harvest-explorer{padding:14px}#rail-harvest-explorer button{padding:9px;font-size:13px}}
