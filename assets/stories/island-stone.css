@@ -1,0 +1,10 @@
+#church-stone img{display:block;width:100%;height:auto;max-height:650px;object-fit:contain;margin:0 auto}
+#church-stone figcaption{font:14px/1.6 Arial,sans-serif;color:var(--muted);margin-top:12px}
+#church-stone h2{margin-top:52px}
+#church-stone [id^="church-stone-pair-"]{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:start;margin:30px 0}
+#church-stone [id^="church-stone-pair-"] figure{margin:0;min-width:0}
+#church-stone [id^="church-stone-pair-"] img{height:300px;background:#eee8dc}
+#church-stone table{border-collapse:collapse;width:100%;font:14px/1.6 Arial,sans-serif;margin:24px 0}
+#church-stone th,#church-stone td{text-align:left;vertical-align:top;padding:12px 10px;border-bottom:1px solid var(--line)}
+#church-stone th{background:#eee8dc}
+@media(max-width:600px){#church-stone [id^="church-stone-pair-"]{grid-template-columns:1fr}#church-stone [id^="church-stone-pair-"] img{height:auto;max-height:470px}#church-stone table{table-layout:fixed;font-size:12px}#church-stone th,#church-stone td{padding:10px 6px;overflow-wrap:anywhere}}
